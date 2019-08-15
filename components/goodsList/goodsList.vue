@@ -1,0 +1,91 @@
+<template>
+	<view class="goods-wrapper">
+		<view class="goods-item" v-for="(goods_item, index) in goodsList" :key="index">
+			<view class="goodsImg"><image class="goods-img" :src="goods_item.img"></image></view>
+			<view class="goodsTitle">{{ goods_item.name }}</view>
+			<view class="goodsPrice">
+				<text class="price">¥ {{ goods_item.price }}</text>
+				<text class="buyNum">{{ goods_item.slogan }}人付款</text>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+export default {
+	data() {
+		return {};
+	},
+	props: {
+		goodsList: {
+			type: Array,
+			required: true
+		}
+	}
+};
+</script>
+
+<style lang="scss">
+	.goods-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-flow: wrap;
+		box-sizing: border-box;
+		padding: 0rpx 30rpx;
+		.goods-item {
+			width: 48%;
+			height: 460rpx;
+			border-radius: 20rpx;
+			background-color: #fff;
+			overflow: hidden;
+			box-shadow: 0px 2rpx 24rpx rgba(0, 0, 0, 0.1);
+			margin-bottom: 30rpx;
+			&:nth-last-child(1),
+			&:nth-last-child(2) {
+				margin-bottom: 0;
+			}
+			.goodsImg {
+				height: 300rpx;
+				.goods-img {
+					width: 100%;
+					height: 300rpx;
+				}
+			}
+			.goodsTitle {
+				display: -webkit-box;
+				height: 90rpx;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				padding: 0 20rpx;
+				overflow: hidden;
+				font-size: 26rpx;
+				line-height: 35rpx;
+				/*  #ifdef APP-PLUS  */
+				margin: 0; //这是一个坑
+				/*  #endif  */
+	
+			}
+	
+			.goodsPrice {
+				height: 50rpx;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 26rpx;
+	
+				.price {
+					color: #13227a;
+					font-size: 30rpx;
+					font-weight: bold;
+				}
+	
+				.buyNum {
+					color: #807c87;
+					font-size: 24rpx;
+				}
+			}
+		}
+	}
+</style>
