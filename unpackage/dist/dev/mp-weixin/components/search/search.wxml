@@ -1,0 +1,1 @@
+<view class="search"><view class="text-area"><view data-event-opts="{{[['tap',[['shopList',['$event']]]]]}}" class="input_search" bindtap="__e"><image style="width:48rpx;height:48rpx;" src="../../static/image/search.png"></image><slot name="inp"></slot></view></view></view>

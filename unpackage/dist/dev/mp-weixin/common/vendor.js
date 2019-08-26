@@ -7678,9 +7678,9 @@ createPage(_main.default);
 /* 35 */,
 /* 36 */,
 /* 37 */
-/*!***************************************************************************!*\
-  !*** E:/uniapp/ADS之家/main.js?{"page":"components%2Fimg-load%2Fimg-load"} ***!
-  \***************************************************************************/
+/*!*****************************************************************************!*\
+  !*** E:/uniapp/ADS之家/main.js?{"page":"pages%2Fshop%2FshopList%2FshopList"} ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7688,8 +7688,8 @@ createPage(_main.default);
 /* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _imgLoad = _interopRequireDefault(__webpack_require__(/*! ./components/img-load/img-load.vue */ 38));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_imgLoad.default);
+var _shopList = _interopRequireDefault(__webpack_require__(/*! ./pages/shop/shopList/shopList.vue */ 38));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_shopList.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
 
 /***/ })

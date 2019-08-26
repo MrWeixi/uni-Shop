@@ -4,14 +4,14 @@
     "pages/classify/classify",
     "pages/shop/shop",
     "pages/main/main",
-    "components/img-load/img-load"
+    "pages/shop/shopList/shopList"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#13227a",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "f5f9f9"
   },
   "tabBar": {
     "backgroundColor": "#FFFFFF",
@@ -45,5 +45,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap82.json"
 }

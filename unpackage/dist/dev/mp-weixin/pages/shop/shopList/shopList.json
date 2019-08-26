@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "f5f9f9",
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "goods-list": "/components/goodsList/goodsList",
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
+  }
+}

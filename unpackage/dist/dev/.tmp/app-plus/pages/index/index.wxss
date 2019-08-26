@@ -1,0 +1,257 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+page {
+  background-color: #f8f8f8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 88rpx;
+}
+.index .to-top {
+    width: 90rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    right: 23rpx;
+    bottom: 300rpx;
+    z-index: 9999;
+    -webkit-box-shadow: 0px 3px 5px 3px #ccc;
+            box-shadow: 0px 3px 5px 3px #ccc;
+    text-align: center;
+}
+.index .to-top image {
+      width: 36rpx;
+      height: auto;
+}
+.index .nav {
+    height: 70rpx;
+    color: #13227a;
+    font-size: 32rpx;
+    font-weight: bold;
+    background-color: #fff;
+    margin: 10rpx 0rpx 14rpx 0rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 20rpx;
+}
+.index .nav .big {
+      font-size: 38rpx;
+}
+.index .nav_hot {
+    height: 160rpx;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.index .nav_hot > view {
+      text-align: center;
+      padding: 10rpx 0rpx 30rpx 0rpx;
+      background-color: #fff;
+      margin-top: 10rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+}
+.index .nav_hot > view image {
+        width: 90rpx;
+        height: 76rpx;
+}
+.index .nav_hot > view text {
+        display: block;
+        font-size: 28rpx;
+        color: #666;
+}
+.index .title {
+    color: #13227a;
+    background-color: #fff;
+    margin: 10rpx 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 20rpx 30rpx;
+}
+.index .list-content {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0rpx 30rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.index .list-content .list-item {
+      height: 360rpx;
+      width: 225rpx;
+      overflow: hidden;
+      background-color: #fff;
+      margin-top: 15rpx;
+}
+.index .list-content .list-item .image {
+        width: 100%;
+        height: 220rpx;
+        position: relative;
+}
+.index .list-content .list-item .image image {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+}
+.index .list-content .list-item .image .flash {
+          height: 45rpx;
+          line-height: 45rpx;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          background-color: rgba(0, 0, 122, 0.9);
+          font-size: 24rpx;
+          color: #fff;
+          text-align: center;
+}
+.index .list-content .list-item .texts {
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 26rpx;
+        color: #333;
+}
+.index .list-content .list-item .manxs {
+        width: 100rpx;
+        height: 36rpx;
+        line-height: 36rpx;
+        font-size: 24rpx;
+        letter-spacing: 2rpx;
+        border: #13227a solid 1rpx;
+        color: #13227a;
+        text-align: center;
+        border-radius: 6rpx;
+}
+.index .list-content .list-item .manx {
+        height: 36rpx;
+}
+.index .list-content .list-item .shop {
+        padding: 0 5rpx;
+        color: #13227a;
+        font-size: 26rpx;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        font-weight: bold;
+        letter-spacing: 2rpx;
+        margin-top: 5rpx;
+}
+.index .banner {
+    height: 200rpx;
+    width: 100%;
+    padding: 30rpx;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 30rpx auto;
+}
+.index .banner > image {
+      width: 100%;
+      height: 100%;
+}
+.index .shopList {
+    height: 100rpx;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #13227a;
+    font-size: 36rpx;
+}
+.index .goodsBox {
+    padding: 20rpx 0;
+}
+.carousel {
+  width: 100%;
+  height: 300rpx;
+}
+.carousel .carousel-item {
+    width: 100%;
+    height: 100%;
+    padding: 0 28rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow: hidden;
+}
+.carousel image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+

@@ -112,13 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var goodsList = function goodsList() {return __webpack_require__.e(/*! import() | components/goodsList/goodsList */ "components/goodsList/goodsList").then(__webpack_require__.bind(null, /*! ../../components/goodsList/goodsList.vue */ 45));};var uniLoadMore = function uniLoadMore() {return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! ../../components/uni-load-more/uni-load-more.vue */ 52));};var _default =
-
-
-
-
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var goodsList = function goodsList() {return __webpack_require__.e(/*! import() | components/goodsList/goodsList */ "components/goodsList/goodsList").then(__webpack_require__.bind(null, /*! @/components/goodsList/goodsList.vue */ 45));};var uniLoadMore = function uniLoadMore() {return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 52));};var adsSearch = function adsSearch() {return __webpack_require__.e(/*! import() | components/search/search */ "components/search/search").then(__webpack_require__.bind(null, /*! @/components/search/search.vue */ 59));};var _default =
 
 
 
@@ -210,7 +204,8 @@ __webpack_require__.r(__webpack_exports__);
 {
   components: {
     goodsList: goodsList,
-    uniLoadMore: uniLoadMore },
+    uniLoadMore: uniLoadMore,
+    adsSearch: adsSearch },
 
   data: function data() {
     return {
