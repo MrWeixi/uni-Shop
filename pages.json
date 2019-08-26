@@ -28,7 +28,6 @@
 			"style": {
 				"navigationBarBackgroundColor": "f5f9f9",
 				"navigationBarTitleText": "个人中心",
-				"enablePullDownRefresh": true,
 				"navigationStyle": "custom"
 			}
 		},

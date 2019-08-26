@@ -193,7 +193,7 @@ page {
 .cover-container {
 	width: 100%;
 	background: #ccc;
-	margin-top: -240upx;
+	margin-top: -200upx;
 	padding: 0 30upx;
 	position: relative;
 	background: #f5f5f5;
@@ -250,8 +250,8 @@ page {
 	}
 }
 .user-section {
-	height: 520upx;
-	padding: 100upx 30upx 0;
+	height: 460upx;
+	padding: 80upx 30upx 0;
 	position: relative;
 	background: #123597;
 }
@@ -278,7 +278,7 @@ page {
 	display: flex;
 	flex-direction: column;
 	color: #f7d680;
-	height: 240upx;
+	height: 280upx;
 	background: linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
 	border-radius: 16upx 16upx 0 0;
 	overflow: hidden;
@@ -289,7 +289,7 @@ page {
 		top: 20upx;
 		right: 0;
 		width: 380upx;
-		height: 260upx;
+		height: 200upx;
 	}
 	.b-btn {
 		position: absolute;
