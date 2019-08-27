@@ -53,48 +53,36 @@
 					</view>
 				</view>
 			</view>
-				<view class="my-assets">
+			<view class="my-assets">
 				<view class="ass">我的工具</view>
 				<view class="ass_list">
 					<view>
-						<view>
-						<image src="../../static/iconfont/liulanjilu.png" mode=""></image>
-						</view>
+						<view><image src="../../static/iconfont/liulanjilu.png" mode=""></image></view>
 						<view>浏览记录</view>
 					</view>
 					<view>
-							<view>
-						<image src="../../static/iconfont/saoyisao.png" mode=""></image>
-						</view>
+						<view><image src="../../static/iconfont/saoyisao.png" mode=""></image></view>
 						<view>扫一扫</view>
 					</view>
 					<view>
-						<view>
-						<image src="../../static/iconfont/yaoqinghaoyou.png" mode=""></image>
-						</view>
+						<view><image src="../../static/iconfont/yaoqinghaoyou.png" mode=""></image></view>
 						<view>邀请好友</view>
 					</view>
 					<view>
-						<view>
-						<image src="../../static/iconfont/yijianfankui.png" mode=""></image>
-						</view>
+						<view><image src="../../static/iconfont/yijianfankui.png" mode=""></image></view>
 						<view>意见反馈</view>
 					</view>
-						<view>
-						<view>
-						<image src="../../static/iconfont/gengduo.png" mode=""></image>
-						</view>
+					<view>
+						<view><image src="../../static/iconfont/gengduo.png" mode=""></image></view>
 						<view>更多...</view>
 					</view>
 				</view>
 			</view>
-				<view class="my-assets">
+			<view class="my-assets">
 				<view class="ass">使用记录</view>
 				<view class="ass_list">
 					<view>
-						<view>
-							0
-						</view>
+						<view>0</view>
 						<view>商品收藏</view>
 					</view>
 					<view>
@@ -102,45 +90,37 @@
 						<view>历史购买</view>
 					</view>
 					<view>
-						<view>
-							12
-						</view>
+						<view>12</view>
 						<view>我的足迹</view>
 					</view>
 				</view>
 			</view>
-						<view class="my-assets">
+			<view class="my-assets">
 				<view class="ass">我的工具</view>
 				<view class="ass_list">
 					<view>
-						<view>
-						<image src="../../static/iconfont/fengxianpianhaoceshi.png" mode=""></image>
-						</view>
+						<view><image src="../../static/iconfont/fengxianpianhaoceshi.png" mode=""></image></view>
 						<view>测试</view>
 					</view>
 					<view>
-							<view>
-						<image src="../../static/iconfont/gengduo.png" mode=""></image>
-						</view>
+						<view><image src="../../static/iconfont/gengduo.png" mode=""></image></view>
 						<view>消息</view>
 					</view>
 					<view>
-						<view>
-						<image src="../../static/iconfont/kefu.png" mode=""></image>
-						</view>
+						<view><image src="../../static/iconfont/kefu.png" mode=""></image></view>
 						<view>客服</view>
 					</view>
-					<view>
-					</view>
-						<view>
-					</view>
+					<view></view>
+					<view></view>
 				</view>
 			</view>
 		</view>
 	</view>
 </template>
 <script>
-let startY = 0,moveY = 0,pageAtTop = true;
+let startY = 0,
+	moveY = 0,
+	pageAtTop = true;
 export default {
 	data() {
 		return {
@@ -165,10 +145,9 @@ export default {
 				return;
 			}
 			this.moving = true;
-			if (moveDistance >= 80 && moveDistance <100) {
+			if (moveDistance >= 80 && moveDistance < 100) {
 				moveDistance = 80;
 			}
-
 			if (moveDistance > 0 && moveDistance <= 80) {
 				this.coverTransform = `translateY(${moveDistance}px)`;
 			}
@@ -220,28 +199,28 @@ page {
 			align-items: center;
 			border-bottom: 1rpx solid #f2f2f2;
 		}
-		.ass_list{
+		.ass_list {
 			display: flex;
 			justify-content: space-evenly;
-			&>view{
+			& > view {
 				flex: 1;
-				font-size:28rpx;
+				font-size: 28rpx;
 				text-align: center;
-				margin:30rpx 0rpx;
-				&>view:nth-child(1){
-				font-size: 32rpx;
-				font-weight: bold;
-				color: #123597;
-				image{
-					width:56rpx;
-					height: 56rpx;
+				margin: 30rpx 0rpx;
+				& > view:nth-child(1) {
+					font-size: 32rpx;
+					font-weight: bold;
+					color: #123597;
+					image {
+						width: 56rpx;
+						height: 56rpx;
+					}
+					text {
+						font-size: 26rpx;
+						font-weight: 500;
+					}
 				}
-				text{
-					font-size: 26rpx;
-					font-weight: 500;
-				}
-				}
-				&>view:nth-child(2){
+				& > view:nth-child(2) {
 					color: #999;
 					margin-top: 10rpx;
 				}
@@ -273,7 +252,6 @@ page {
 		margin-left: 20upx;
 	}
 }
-
 .vip-card-box {
 	display: flex;
 	flex-direction: column;

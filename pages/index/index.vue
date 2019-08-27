@@ -87,9 +87,9 @@
 		</view>
 			<view>
 			<!-- 顶部 -->
-			<view class="to-top" @click="goTop" v-show="isshow"><image src="../../static/iconfont/top.png" mode="widthFix"></image></view>
 		</view>
-		<uni-load-more :status="status" />
+		<uni-load-more :status="status" />	
+		<view class="to-top" @click="goTop" v-show="isshow"><image src="../../static/iconfont/top.png" mode="widthFix"></image></view>
 	</view>
 </template>
 <script>
