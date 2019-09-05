@@ -1,6 +1,5 @@
 {
-  "navigationBarBackgroundColor": "#f5f9f9",
-  "navigationBarTitleText": "首页",
+  "navigationBarTitleText": "ADS之家",
   "usingComponents": {
     "goods-list": "/components/goodsList/goodsList",
     "uni-load-more": "/components/uni-load-more/uni-load-more",
