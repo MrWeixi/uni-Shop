@@ -9,14 +9,15 @@
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#13227a",
-    "backgroundColor": "f5f9f9"
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#f5f9f9",
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "backgroundColor": "#FFFFFF",
     "selectedColor": "#13227a",
     "color": "#C8C7CC",
-    "borderStyle": "white",
+    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -45,11 +46,12 @@
     ]
   },
   "nvueCompiler": "weex",
+  "renderer": "auto",
   "splashscreen": {
     "alwaysShowBeforeRender": true,
     "autoclose": false
   },
   "appname": "ADS之家",
-  "compilerVersion": "2.1.3",
+  "compilerVersion": "2.2.2",
   "usingComponents": {}
 }

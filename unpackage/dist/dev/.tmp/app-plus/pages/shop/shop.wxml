@@ -1,1 +1,1 @@
-<view><text>sss</text></view>
+<view class="container"><view class="cart-list"><view class="cart-item"><view class="checkbox"><view class="yticon icon-xuanzhong2 chex"></view></view></view></view></view>

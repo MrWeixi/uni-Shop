@@ -237,6 +237,16 @@ page {
 .index .goodsBox {
     padding: 20rpx 0;
 }
+.apps {
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  background-color: #DD524D;
+  padding-top: 40rpx;
+}
+.carousel {
+  padding: 100rpx 0rpx 20rpx 0rpx;
+}
 .carousel {
   width: 100%;
   height: 300rpx;

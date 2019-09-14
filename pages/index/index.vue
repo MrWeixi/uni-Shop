@@ -5,15 +5,15 @@
 		<ads-search><input slot="inp" type="text" disabled="true" placeholder="请输入商品关键字" confirm-type="search"
 			 placeholder-style="color:#ccc;" /></ads-search>
 		<!--#endif-->
-		<view class="apps" :style="{backgroundColor:back}">
-		<swiper class="carousel"  @change="swiperChange" :indicator-dots="true" :autoplay="true" indicator-color="rgba(0, 0, 0, .3)" circular
-		 indicator-active-color="#fff" :interval="3000" :duration="1000">
-			<swiper-item v-for="(item, index) in imgList" class="carousel-item" :key="index">
-				<image :src="item.src"></image>
-			</swiper-item>
-		</swiper>
-		</view>
 		
+		<view class="apps" :style="{backgroundColor:back}">
+			<swiper class="carousel" @change="swiperChange" :indicator-dots="true" :autoplay="true" indicator-color="rgba(0, 0, 0, .3)"
+			 circular indicator-active-color="#fff" :interval="3000" :duration="1000">
+				<swiper-item v-for="(item, index) in imgList" class="carousel-item" :key="index">
+					<image :src="item.src"></image>
+				</swiper-item>
+			</swiper>
+		</view>
 		<view class="nav">
 			<text :class="[acitveIndex == index ? 'big' : '']" v-for="(items, index) in menus" :key="index" :id="'menus' + index"
 			 @click="menuClick">{{ items }}</text>
@@ -27,7 +27,7 @@
 				<image src="../../static/image/VIP.png" mode=""></image>
 				<text>会员优享卡</text>
 			</view>
-			<view>
+			<view @tap="all">
 				<image src="../../static/image/quanbu.png" mode=""></image>
 				<text>全部商品</text>
 			</view>
@@ -111,17 +111,16 @@
 		created() {
 			this.isshow = false;
 		},
-
 		data() {
 			return {
 				isshow: false,
 				acitveIndex: 0,
-				back:'',
+				back: '',
 				menus: ['新品', '灯饰', '餐厨', '家具', '家居', '礼物'],
 				imgList: [{
 						src: '/static/image/2.jpg',
 						id: 0,
-						background: "rgb(19,34,122)"			
+						background: "rgb(19,34,122)"
 					},
 					{
 						src: '/static/image/1.jpg',
@@ -251,9 +250,57 @@
 			};
 		},
 		onLoad() {},
+		// #ifndef MP
+		// 标题栏input搜索框点击
+		onNavigationBarSearchInputClicked: async function(e) {
+			uni.navigateTo({
+				url:'/pages/shop/shopList/shopList'
+			})
+		},
+		//点击导航栏 buttons 时触发
+		onNavigationBarButtonTap(e) {
+			const index = e.index;
+			if (index === 0) {
+	         console.log('点击了扫描')
+			} else if (index === 1) {
+				// #ifdef APP-PLUS
+				const pages = getCurrentPages();
+				const page = pages[pages.length - 1];
+				const currentWebview = page.$getAppWebview();
+				currentWebview.hideTitleNViewButtonRedDot({
+					index
+				});
+				// #endif
+				console.log('点击了消息');
+			}
+		},
+		// #endif
 		onReachBottom() {
 			this.goodsLists = this.goodsLists.concat(this.goodsLists);
 		},
+		// #ifdef MP
+		onNavigationBarSearchInputChanged(e) {
+			console.log(e)
+		},
+		onNavigationBarButtonTap(e) {
+			const index = e.index;
+			if (index === 0) {
+				console.log(1)
+			} else if (index === 1) {
+				// #ifdef APP-PLUS
+				const pages = getCurrentPages();
+				const page = pages[pages.length - 1];
+				const currentWebview = page.$getAppWebview();
+				currentWebview.hideTitleNViewButtonRedDot({
+					index
+				});
+				// #endif
+				uni.navigateTo({
+					url: '../shop/shopList/shopList'
+				})
+			}
+		}
+		// #endif
 		onPageScroll(e) {
 			//返回顶部
 			if (e.scrollTop > 500) {
@@ -267,24 +314,32 @@
 		},
 		methods: {
 			// 修改背景颜色
-			swiperChange(e){
-				const index =e.detail.current;
+			swiperChange(e) {
+				const index = e.detail.current;
 				//#ifdef APP-PLUS ||H5			
 				this.back = this.imgList[index].background;
 				//#endif
-				// this.back=`background: "rgb(0,153,102)"`
 			},
 			menuClick(e) {
 				var aId = e.target.id;
 				aId = aId.substr(5);
-				this.acitveIndex = aId;
+				this.acitveIndex = aId;			
+					uni.navigateTo({
+					url:"../../pages/shop/shopList/shopList"
+					})
 			},
 			// 返回顶部
-			goTop: function(e) {
+			goTop(e) {
 				uni.pageScrollTo({
 					scrollTop: 0,
 					duration: 100
 				});
+			},
+			// 全部商品
+			all(){
+				uni.switchTab({
+					url:'/page/classify/classify'
+				})
 			}
 		}
 	};
@@ -295,10 +350,11 @@
 		background-color: #f8f8f8;
 		box-sizing: border-box;
 	}
-	
+
 	.index {
 		box-sizing: border-box;
 		padding-bottom: 88rpx;
+
 		.to-top {
 			width: 90upx;
 			height: 90upx;
@@ -311,11 +367,13 @@
 			z-index: 9999;
 			box-shadow: 0px 3px 5px 3px #ccc;
 			text-align: center;
+
 			image {
 				width: 36upx;
 				height: auto;
 			}
 		}
+
 		.nav {
 			height: 70rpx;
 			color: #13227a;
@@ -426,9 +484,11 @@
 					text-align: center;
 					border-radius: 6rpx;
 				}
+
 				.manx {
 					height: 36rpx;
 				}
+
 				.shop {
 					padding: 0 5rpx;
 					color: #13227a;
@@ -442,6 +502,7 @@
 				}
 			}
 		}
+
 		.banner {
 			height: 200rpx;
 			width: 100%;
@@ -449,11 +510,13 @@
 			background-color: #fff;
 			box-sizing: border-box;
 			margin: 30rpx auto;
+
 			&>image {
 				width: 100%;
 				height: 100%;
 			}
 		}
+
 		.shopList {
 			height: 100rpx;
 			width: 100%;
@@ -467,31 +530,39 @@
 		.goodsBox {
 			padding: 20rpx 0;
 		}
-	}	
-.apps{
-	transition: .4s;
-	background-color: #DD524D;
-}
-/* #ifdef MP */
-    .apps{
+	}
+
+	.apps {
+		transition: .4s;
+		background-color: #DD524D;
+		padding-top: 40rpx;
+	}
+
+	/* #ifdef MP */
+	.apps {
 		transition: .4s;
 		background-color: #fff;
+		padding-top: 40rpx;
 	}
+
 	.carousel {
-		background-color:fff;
+		background-color: fff;
 		.carousel-item {
 			padding: 0;
 		}
 	}
+
 	/* #endif */
 	/*#ifdef APP-PLUS ||H5*/
 	.carousel {
-		padding:100upx 0rpx 20rpx 0rpx;
+		padding: 100upx 0rpx 20rpx 0rpx;
 	}
+
 	/*#endif*/
 	.carousel {
 		width: 100%;
 		height: 300upx;
+
 		.carousel-item {
 			width: 100%;
 			height: 100%;

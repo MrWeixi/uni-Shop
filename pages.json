@@ -1,70 +1,94 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页
-	{
-		"path": "pages/index/index",
-		"style": {
-			// #ifdef MP 
-			"navigationBarTitleText": "ADS之家",
-			// #endif 
-			"app-plus": {
-				"titleNView": {
-					"type": "transparent",
-					"searchInput": {
-						"backgroundColor": "rgba(231, 231, 231,.7)",
-						"borderRadius": "16px",
-						"placeholder": "输入您喜欢的 ",
-						"disabled": true,
-						"placeholderColor": "#606266"
-					},
-					"buttons": [{
-							"fontSrc": "/static/yticon.ttf",
-							"text": "\ue60d",
-							"fontSize": "26",
-							"color": "#303133",
-							"float": "left",
-							"background": "rgba(0,0,0,0)"
+		{
+			"path": "pages/index/index",
+			"style": {
+				// #ifdef MP 
+				"navigationBarTitleText": "ADS之家",
+				// #endif 
+				"app-plus": {
+					
+					"titleNView": {
+						"type": "transparent",
+						"searchInput": {
+							"backgroundColor": "rgba(231, 231, 231,.7)",
+							"borderRadius": "16px",
+							"placeholder": "找您喜欢的 ",
+							"disabled": true,
+							"placeholderColor": "#606266"
 						},
-						{
-							"fontSrc": "/static/yticon.ttf",
-							"text": "\ue744",
-							"fontSize": "27",
-							"color": "#303133",
-							"background": "rgba(0,0,0,0)",
-							"redDot": true
-						}
-					]
+						"buttons": [{
+								"fontSrc": "/static/yticon.ttf",
+								"text": "\ue60d",
+								"fontSize": "26",
+								"color": "#303133",
+								"float": "left",
+								"background": "rgba(0,0,0,0)"
+							},
+							{
+								"fontSrc": "/static/yticon.ttf",
+								"text": "\ue744",
+								"fontSize": "27",
+								"color": "#303133",
+								"background": "rgba(0,0,0,0)",
+								"redDot": true
+							}
+						]
+					},
+					"scrollIndicator":"none"
 				}
 			}
-		}
-	},
+		},
 		{
 			"path": "pages/classify/classify",
 			"style": {
 				"navigationBarTitleText": "分类",
-				"navigationBarBackgroundColor": "#f5f9f9",
-				"enablePullDownRefresh": true
+				"navigationBarBackgroundColor": "#f5f9f9"
 			}
 		},
 		{
 			"path": "pages/shop/shop",
 			"style": {
-				"navigationBarBackgroundColor": "f5f9f9",
-				"navigationBarTitleText": "购物车",
-				"enablePullDownRefresh": true
+				"navigationBarBackgroundColor": "#f5f9f9",
+				"navigationBarTitleText": "购物车"
 			}
 		},
 		{
 			"path": "pages/main/main",
 			"style": {
-				"navigationBarBackgroundColor": "f5f9f9",
 				"navigationBarTitleText": "个人中心",
-				"navigationStyle": "custom"
+				// #ifdef MP
+				"navigationStyle": "custom",
+				// #endif
+				"app-plus": {
+					"bounce": "none",
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [{
+								"fontSrc": "/static/yticon.ttf",
+								"text": "\ue60f",
+								"fontSize": "24",
+								"color": "#303133",
+								"width": "46px",
+								"background": "rgba(0,0,0,0)"
+							},
+							{
+								"fontSrc": "/static/yticon.ttf",
+								"text": "\ue744",
+								"fontSize": "28",
+								"color": "#303133",
+								"background": "rgba(0,0,0,0)",
+								"redDot": true
+							}
+						]
+					}
+				}
 			}
 		},
 		{
 			"path": "pages/shop/shopList/shopList",
 			"style": {
-				"navigationBarBackgroundColor": "f5f9f9",
+				"navigationBarBackgroundColor": "#f5f9f9",
 				"navigationBarTitleText": "商品列表",
 				"enablePullDownRefresh": true
 			}
@@ -74,7 +98,7 @@
 		"backgroundColor": "#FFFFFF",
 		"selectedColor": "#13227a",
 		"color": "#C8C7CC",
-		"borderStyle": "white",
+		"borderStyle": "black",
 		"list": [{
 				"pagePath": "pages/index/index",
 				"iconPath": "static/image/index.png",
@@ -106,6 +130,7 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#FFFFFF",
-		"backgroundColor": "f5f9f9"
+		"backgroundColor": "#f5f9f9",
+		"enablePullDownRefresh":false
 	}
 }
