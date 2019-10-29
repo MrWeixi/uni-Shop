@@ -136,6 +136,24 @@
 				moving: false
 			};
 		},
+		onNavigationBarButtonTap(e) {
+			const index = e.index;
+			if (index === 0) {
+		     uni.navigateTo({
+		     	url:'../set/set'
+		     })
+			} else if (index === 1) {
+				// #ifdef APP-PLUS
+				const pages = getCurrentPages();
+				const page = pages[pages.length - 1];
+				const currentWebview = page.$getAppWebview();
+				currentWebview.hideTitleNViewButtonRedDot({
+					index
+				});
+				// #endif
+				console.log('点击了消息');
+			}
+		},
 		methods: {
 			coverTouchstart(e) {
 				if (pageAtTop === false) {

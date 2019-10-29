@@ -104,7 +104,25 @@
 				"enablePullDownRefresh": true
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/set/set",
+            "style" : {
+				"navigationBarTitleText": "设置"
+			}
+        }
+        ,{
+            "path" : "pages/public/register/register",
+            "style" : {
+				"navigationBarTitleText": "注册登录"
+			}
+        }
+        ,{
+            "path" : "pages/public/find/find",
+            "style" : {
+				"navigationBarTitleText": "找回密码"
+			}
+        }
+    ],
 	"tabBar": {
 		"backgroundColor": "#FFFFFF",
 		"selectedColor": "#13227a",

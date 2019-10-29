@@ -17,7 +17,11 @@
 					<image class="icon-sh" v-show="!isblock" :src="$websiteUrl('/upload/uniapp/login/login_wx_20190731145902.png')" mode="" ></image>
 				</view>
 			</view>
+			<view class="argin">
+				<text @tap.stop='register(1)'>立即注册</text> <text @tap.stop='register(2)'>找回密码</text>
+			</view>
 		</view>
+		
 		<view class="but" @tap.stop="Login">
 			立即登录
 		</view>
@@ -27,6 +31,7 @@
 <script>
 	import {postApi} from '@/common/api/api.js'
 	import {url} from '@/common/api/url.js'
+	import {navGo}  from "@/common/nav/nav.js"
 	export default {
 		data() {
 			return {
@@ -51,6 +56,16 @@
 					this.isblock=true;
 				}
 			},
+			register(number){
+				switch(number){
+					case 1:
+					navGo('/pages/public/register/register');
+					break;
+					case 2:
+					navGo('/pages/public/find/find');
+					break;
+				}
+			},
 		async Login(){ //立即登录
 			   await postApi(url.login,{
 				   data: {
@@ -59,6 +74,12 @@
 				   }
 			   }).then(res=>{
 				   this.$msg(res.data.msg);
+				   if(res.data.code==1){
+				    uni.setStorageSync('token', res.data.data.token);
+					  uni.switchTab({
+					  	url:'../../index/index'
+					  })
+				   }
 			   })
 			}
 		}
@@ -69,6 +90,7 @@
 	page{
 		width: 100%;
 		height: 100%;
+		 font-size:30rpx;
 	}
 	.login{
 		display: flex;
@@ -98,6 +120,14 @@
 			 input{
 				 margin-left: 30rpx;
 			 }
+		 }
+		 .argin{
+			 display: flex;
+			 align-items: center;
+			 justify-content: space-between;
+			 color: #13227A;
+			 font-size:30rpx;
+			 border-bottom: none;
 		 }
 	 }
 	 .but{
