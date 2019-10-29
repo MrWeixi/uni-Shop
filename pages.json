@@ -1,13 +1,24 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页
 		{
+			"path": "pages/public/login/login",
+			"style": {
+				// #ifdef MP
+				"navigationBarTitleText": "登录",
+				// #endif 
+				"app-plus": {		
+					"bounce": "none"	
+				}
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				// #ifdef MP 
 				"navigationBarTitleText": "ADS之家",
 				// #endif 
 				"app-plus": {
-					
+
 					"titleNView": {
 						"type": "transparent",
 						"searchInput": {
@@ -35,7 +46,7 @@
 							}
 						]
 					},
-					"scrollIndicator":"none"
+					"scrollIndicator": "none"
 				}
 			}
 		},
@@ -128,9 +139,8 @@
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#f5f9f9",
-		"enablePullDownRefresh":false
+		"enablePullDownRefresh": false
 	}
 }

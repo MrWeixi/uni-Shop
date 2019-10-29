@@ -34,7 +34,7 @@
 					优惠:<text>20</text>元
 				</text>
 			</view>
-			<button type="primary" class="no-border confirm-btn" @tap="go">去结算</button>
+			<button class="no-border confirm-btn" @tap="go">去结算</button>
 		</view>
 	</view>
 </template>
@@ -193,10 +193,8 @@
 				opacity: 1;
 				width: 100upx;
 			}
-
 		}
 	}
-
 	.total-box {
 		display: flex;
 		flex-direction: column;
@@ -205,16 +203,13 @@
 			font-size: 28rpx;
 			color: #13227a;
 		}
-
 		.coupon {
 			font-size: 26rpx;
-
 			text {
 				color: #666;
 			}
 		}
 	}
-
 	.confirm-btn {
 		padding: 0 38rpx;
 		margin: 0;
@@ -222,9 +217,9 @@
 		height: 80rpx;
 		line-height: 80rpx;
 		font-size: 28rpx;
-		background-color: #13227a;
+		background: #13227a;
+		color: #fff;
 	}
-
 	.checkbox {
 		width: 120rpx;
 		display: flex;

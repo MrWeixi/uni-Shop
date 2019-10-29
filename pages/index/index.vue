@@ -376,7 +376,7 @@
 
 		.nav {
 			height: 70rpx;
-			color: #13227a;
+			color: $font-color1;
 			font-size: 32rpx;
 			font-weight: bold;
 			background-color: #fff;
@@ -479,8 +479,8 @@
 					line-height: 36rpx;
 					font-size: 24rpx;
 					letter-spacing: 2rpx;
-					border: #13227a solid 1rpx;
-					color: #13227a;
+					border: $font-color1 solid 1rpx;
+					color: $font-color1;
 					text-align: center;
 					border-radius: 6rpx;
 				}
@@ -491,7 +491,7 @@
 
 				.shop {
 					padding: 0 5rpx;
-					color: #13227a;
+					color: $font-color1;
 					font-size: 26rpx;
 					display: flex;
 					align-items: center;
@@ -502,7 +502,6 @@
 				}
 			}
 		}
-
 		.banner {
 			height: 200rpx;
 			width: 100%;
@@ -523,7 +522,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			color: #13227a;
+			color: $font-color1;
 			font-size: 36rpx;
 		}
 
@@ -531,20 +530,17 @@
 			padding: 20rpx 0;
 		}
 	}
-
 	.apps {
 		transition: .4s;
 		background-color: #DD524D;
 		padding-top: 40rpx;
 	}
-
 	/* #ifdef MP */
 	.apps {
 		transition: .4s;
 		background-color: #fff;
 		padding-top: 40rpx;
 	}
-
 	.carousel {
 		background-color: fff;
 		.carousel-item {
@@ -557,12 +553,10 @@
 	.carousel {
 		padding: 100upx 0rpx 20rpx 0rpx;
 	}
-
 	/*#endif*/
 	.carousel {
 		width: 100%;
 		height: 300upx;
-
 		.carousel-item {
 			width: 100%;
 			height: 100%;
@@ -570,7 +564,6 @@
 			box-sizing: border-box;
 			overflow: hidden;
 		}
-
 		image {
 			width: 100%;
 			height: 100%;
